@@ -11,7 +11,7 @@ String.prototype.replaceChars = function(character, replacement){
         }
         return str;
 }
- 
+
 function search(query){
     switch(query.substr(0, 2)){
         case "-u":
@@ -36,24 +36,24 @@ function search(query){
 
         case "-n":
             query = query.substr(3);
-            window.location = 
-    	"https://www.nyaa.se/?page=search&cats=0_0&filter=0&term=" + 
+            window.location =
+    	"https://www.nyaa.se/?page=search&cats=0_0&filter=0&term=" +
     	query.replaceChars("+", "%2B");
     	break;
 
         case "-e":
         	query=query.substr(3);
-        	window.location = 
-	"https://exhentai.org/?f_doujinshi=1&f_manga=1&f_artistcg=1&f_gamecg=1&f_western=0&f_non-h=0&f_imageset=0&f_cosplay=0&f_asianporn=0&f_misc=0&f_search=" + 
+        	window.location =
+	"https://exhentai.org/?f_doujinshi=1&f_manga=1&f_artistcg=1&f_gamecg=1&f_western=0&f_non-h=0&f_imageset=0&f_cosplay=0&f_asianporn=0&f_misc=0&f_search=" +
 	query.concat("&f_apply=Apply+Filter");
 	break;
 
         default:
-            window.location="https://www.google.fr/search?q=" +
+            window.location="https://www.google.com/search?q=" +
                 query.replaceChars("", "+");
     }
 }
- 
+
 window.onload = function(){
     // search
     searchinput = document.getElementById("searchbox");
@@ -66,10 +66,10 @@ window.onload = function(){
             }
         });
     }
- 
+
     // jump to search when tab is pressed
     var search_sqr = document.getElementById("search_sqr");
- 
+
         }
  // dd
 //
@@ -83,7 +83,7 @@ window.onload = function(){
 //          break;
 //
 // -a on ln68 should be replaced with a "-letter" of your choice. You can also change it to !a, .a, /a etc.
-// https://en.website.com/ on ln70 should be replaced with the search page of the website. To find this, make a few searches on your website. 
+// https://en.website.com/ on ln70 should be replaced with the search page of the website. To find this, make a few searches on your website.
 //Try to identify where your search is in the URL. If you're not sure, post in the thread and someone should help you out
 //
 // You can use the above two to modify an existing rule
